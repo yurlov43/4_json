@@ -1,8 +1,14 @@
 # Prettify JSON
 
-The script prints a JSON file in the console.
+The program prints a JSON file in the console.
 
 # Quickstart
+
+Example of script launch on Linux, Python 3.5:
+
+```bash
+$ python pprint_json.py <path to file>
+```
 
 The program in the parameters takes a file name with JSON data:
 
@@ -13,13 +19,7 @@ load_data(filepath) #The function deserializes JSON from a file
 The result of the program will be the output of the received data to the console, in an easy-to-read form:
 
 ```bash
-pretty_print_json(data) #The function serializes obj into a JSON-format string and prints it to the goat in a readable form
-```
-
-Example of script launch on Linux, Python 3.5:
-
-```bash
-$ python pprint_json.py <path to file>
+pretty_print_json(data) #The function serializes obj into a JSON-format string
 ```
 
 Example of outputting JSON data to the console:
