@@ -4,10 +4,10 @@ import sys
 
 def load_data(filepath):
     try:
-        with open(filepath, "r") as f:
-            data = json.load(f)
+        with open(filepath, "r") as file_json:
+            data = json.load(file_json)
         pretty_print_json(data)
-    except IOError as e:
+    except IOError as error:
         print("Ошибка. Файл не найден.")
 
 
