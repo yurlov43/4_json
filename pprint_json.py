@@ -3,12 +3,9 @@ import sys
 
 
 def load_data(filepath):
-    data = ""
     try:
         with open(filepath, "r") as f:
-            for line in f:
-                data += line
-        data = json.loads(data)
+            data = json.load(f)
         pretty_print_json(data)
     except IOError as e:
         print("Ошибка. Файл не найден.")
