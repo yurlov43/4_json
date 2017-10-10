@@ -5,14 +5,14 @@ import sys
 def load_data(filepath):
     try:
         with open(filepath, "r") as file_json:
-            data = json.load(file_json)
-        pretty_print_json(data)
+            data_json = json.load(file_json)
+        pretty_print_json(data_json)
     except IOError as error:
         print("Ошибка. Файл не найден.")
 
 
-def pretty_print_json(data):
-    print(json.dumps(data, sort_keys=True, indent=4))
+def pretty_print_json(data_json):
+    print(json.dumps(data_json, sort_keys=True, indent=4))
 
 
 if __name__ == '__main__':
