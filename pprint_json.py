@@ -7,10 +7,10 @@ def load_data(filepath):
         with open(filepath, "r") as file_json:
             str_json = file_json.read()
         if not str_json:
-            raise sys.exit("Ошибка: файл пуст.")
+            return None
         return str_json
     except IOError as err:
-        sys.exit("Ошибка: файл не найден.")
+        return None
 
 
 def load_json(str_json):
@@ -29,5 +29,7 @@ if __name__ == '__main__':
         sys.exit("Ошибка: слишком много параметров.")
     filepath = sys.argv[1]
     str_json = load_data(filepath)
+    if str_json is None:
+        sys.exit("Ошибка: файл не найден или пуст.")
     data_json = load_json(str_json)
     pretty_print_json(data_json)
